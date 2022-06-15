@@ -22,7 +22,7 @@ export default {
   data(){
     return {
         // API link
-        apiUrl : "https://api.themoviedb.org/3/movie/550?api_key=a52d13991466b7a593490ce84099f0d3&language=en-US",
+        apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=a52d13991466b7a593490ce84099f0d3&query=back+to+the+future",
         films : [],
         userText : "",
     }

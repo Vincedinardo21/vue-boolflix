@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
         <!-- Titolo -->
-        <h2>{{filmObject.title}}</h2>
+        <h2>{{filmObject.results[0].title}}</h2>
         <!-- Titolo originale -->
         <h3>{{filmObject.original_title}}</h3>
         <!-- Lingua -->
