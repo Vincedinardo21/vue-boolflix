@@ -3,18 +3,20 @@
     <MyHeader/>
 
     <main>
-
+      <FilmList/>
     </main>
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue'
+import FilmList from './components/FilmList.vue'
 
 export default {
   name: 'App',
   components: {
-    MyHeader
+    MyHeader,
+    FilmList,
   }
 }
 </script>

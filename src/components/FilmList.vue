@@ -1,9 +1,12 @@
 <template>
-  
+    <section>
+        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>
+    </section>
 </template>
 
 <script>
 import axios from "axios"
+import FilmCard from "./FilmCard.vue";
 
 export default {
   name: 'FilmList',
@@ -13,25 +16,28 @@ export default {
   data(){
     return {
         // API link
-        apiUrl : "https://api.themoviedb.org/3/movie/550?api_key=a52d13991466b7a593490ce84099f0d3",
-        films : []
+        apiUrl : "https://api.themoviedb.org/3/movie/550?api_key=a52d13991466b7a593490ce84099f0d3&language=en-US",
+        films : [],
     }
   },
-  create(){
+  created(){
     this.getFilm();
   },
   methods: {
     getFilm(){
         axios.get(this.apiUrl).then((result) => {
-            this.films = result.data.response;
+            this.films.push(result.data);
             console.log(result);
         });
-    }
+    },
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  
+    section {
+        min-height: 200px;
+        background-color: aqua;
+    }
 </style>
