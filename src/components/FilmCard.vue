@@ -3,11 +3,11 @@
         <!-- Titolo -->
         <h2>{{filmObject.results[0].title}}</h2>
         <!-- Titolo originale -->
-        <h3>{{filmObject.original_title}}</h3>
+        <h3>{{filmObject.results[0].original_title}}</h3>
         <!-- Lingua -->
-        <div>{{filmObject.original_language}}</div>
+        <div>{{filmObject.results[0].original_language}}</div>
         <!-- Voto -->
-        <div>{{filmObject.popularity}}</div>
+        <div>{{filmObject.results[0].vote_average}}</div>
     </div>
 </template>
 
