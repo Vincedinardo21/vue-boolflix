@@ -1,9 +1,7 @@
 <template>
   <header>
-    <div>
-      <input type="search" placeholder="Scrivi qualcosa">
-      <button>Cerca</button>
-    </div>
+      <!-- <MySearch @miaRicerca="searchFilm"/>
+      {{userText}} -->
   </header>
 </template>
 

@@ -1,23 +1,30 @@
 <template>
-    <section>
-        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>
+    <section> 
+        <div>
+          <MySearch @miaRicerca="searchFilm"/>
+          {{userText}} 
+        </div> 
+        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>     
     </section>
 </template>
 
 <script>
 import axios from "axios"
 import FilmCard from "./FilmCard.vue";
+import MySearch from "./MySearch.vue";
 
 export default {
   name: 'FilmList',
   components: {
     FilmCard,
+    MySearch,
   },
   data(){
     return {
         // API link
         apiUrl : "https://api.themoviedb.org/3/movie/550?api_key=a52d13991466b7a593490ce84099f0d3&language=en-US",
         films : [],
+        userText : "",
     }
   },
   created(){
@@ -30,6 +37,10 @@ export default {
             console.log(result);
         });
     },
+    searchFilm(mytext){
+      this.userText = mytext;
+      console.log(mytext);
+    }
   }
 }
 </script>

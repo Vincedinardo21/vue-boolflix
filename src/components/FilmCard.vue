@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div class="card-container">
         <!-- Titolo -->
-        <!-- <h2>Ciao</h2> -->
+        <h2>{{filmObject.title}}</h2>
         <!-- Titolo originale -->
-        <h2>{{filmObject.original_title}}</h2>
+        <h3>{{filmObject.original_title}}</h3>
         <!-- Lingua -->
-        <div></div>
+        <div>{{filmObject.original_language}}</div>
         <!-- Voto -->
-        <div></div>
+        <div>{{filmObject.popularity}}</div>
     </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    div {
+    .card-container {
+        width: 300px;
         border: 1px solid black;
     }
 </style>
