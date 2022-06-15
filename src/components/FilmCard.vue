@@ -5,7 +5,8 @@
         <!-- Titolo originale -->
         <h3>{{filmObject.original_title}}</h3>
         <!-- Lingua -->
-        <div>{{filmObject.original_language}}</div>
+        <div>{{filmObject.original_language}}</div>      
+        <img :src="'assets/img/' + 'flag-' + filmObject.original_language + '.png'" :alt="filmObject.original_title">
         <!-- Voto -->
         <div>{{filmObject.vote_average}}</div>
     </div>
@@ -15,7 +16,7 @@
 export default {
   name: 'FilmCard',
   props: {
-      filmObject : Array
+      filmObject : Object
   }
 }
 </script>
