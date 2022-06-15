@@ -22,9 +22,9 @@ export default {
   data(){
     return {
         // API link
-        apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=a52d13991466b7a593490ce84099f0d3&query=back+to+the+future",
+        apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=a52d13991466b7a593490ce84099f0d3&query=",
         films : [],
-        userText : "",
+        userText : "back to the future",
     }
   },
   created(){
@@ -32,14 +32,15 @@ export default {
   },
   methods: {
     getFilm(){
-        axios.get(this.apiUrl).then((result) => {
-            this.films.push(result.data);
+        axios.get(this.apiUrl + this.userText).then((result) => {
+            this.films = result.data.results;
             console.log(result);
         });
     },
     searchFilm(mytext){
       this.userText = mytext;
       console.log(mytext);
+      this.getFilm();
     }
   }
 }

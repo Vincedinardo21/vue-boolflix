@@ -1,13 +1,13 @@
 <template>
     <div class="card-container">
         <!-- Titolo -->
-        <h2>{{filmObject.results[0].title}}</h2>
+        <h2>{{filmObject.title}}</h2>
         <!-- Titolo originale -->
-        <h3>{{filmObject.results[0].original_title}}</h3>
+        <h3>{{filmObject.original_title}}</h3>
         <!-- Lingua -->
-        <div>{{filmObject.results[0].original_language}}</div>
+        <div>{{filmObject.original_language}}</div>
         <!-- Voto -->
-        <div>{{filmObject.results[0].vote_average}}</div>
+        <div>{{filmObject.vote_average}}</div>
     </div>
 </template>
 
@@ -15,7 +15,7 @@
 export default {
   name: 'FilmCard',
   props: {
-      filmObject : Object
+      filmObject : Array
   }
 }
 </script>
