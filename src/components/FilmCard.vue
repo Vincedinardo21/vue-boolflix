@@ -16,7 +16,8 @@
         <div>{{filmObject.vote_average}}</div>
         <div>{{Math.ceil(filmObject.vote_average / 2)}}</div>
         <div class="rate" v-for="(i) in Math.ceil(filmObject.vote_average / 2)" :key="i">
-            <span>Star</span>
+            <!-- <span>Star</span> -->
+            <font-awesome-icon icon="fa-solid fa-star" />
         </div>
     </div>
 </template>
