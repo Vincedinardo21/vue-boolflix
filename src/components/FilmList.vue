@@ -2,9 +2,12 @@
     <section> 
         <div>
           <MySearch @miaRicerca="searchFilm"/>
-          {{userText}} 
+          <!-- {{userText}}  -->
         </div> 
-        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>
+        <div class="film-container">
+            <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>
+        </div>
+        
     </section>
 </template>
 
@@ -60,6 +63,12 @@ export default {
 <style scoped lang="scss">
     section {
         min-height: 200px;
-        background-color: aqua;
+        background-color: gray;
+        
+
+        .film-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
     }
 </style>

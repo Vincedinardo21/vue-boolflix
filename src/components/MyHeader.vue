@@ -1,7 +1,6 @@
 <template>
   <header>
-      <!-- <MySearch @miaRicerca="searchFilm"/>
-      {{userText}} -->
+      <h1>BOOLFLIX</h1>
   </header>
 </template>
 
@@ -15,6 +14,12 @@ export default {
 <style scoped lang="scss">
   header{
     min-height: 100px;
-    border: 1px solid black;
+    // border: 1px solid red;
+    background-color: black;
+    padding: 10px;
+
+    h1 {
+      color: red;
+    }
   }
 </style>
