@@ -13,7 +13,7 @@
         
             <!-- Lingua -->
             <div><span><b>Lingua originale:</b> {{filmObject.original_language}}</span></div>
-              
+            
             <!-- <img :src="'../assets/img/flag-' + filmObject.original_language + '.png'" :alt="filmObject.original_title"> -->
        
             <!-- Voto -->
@@ -21,6 +21,9 @@
                 <span><b>Voto:</b> </span>
                 <font-awesome-icon icon="fa-solid fa-star" v-for="(i) in Math.ceil(filmObject.vote_average / 2)" :key="i"/>
             </div>
+
+            <!-- Overview -->
+            <div><span><b>Overviev:</b> {{filmObject.overview}}</span></div>
         </div>
         
     </div>
@@ -49,7 +52,14 @@ export default {
             position: absolute;
             top: 0;
             padding: 10px;
-            color: white;
+            color: gray;
+
+            b {
+                color: white;
+            }
+            .fa-star {
+                color:goldenrod;
+            }
         }
 
         &:hover{
