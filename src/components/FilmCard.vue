@@ -42,17 +42,24 @@ export default {
         border: 1px solid white;
         margin: 5px;
         position: relative;
+        background-color: black;
 
         .text-container {
             display: none;
             position: absolute;
             top: 0;
+            padding: 10px;
+            color: white;
         }
 
         &:hover{
             .text-container {
                 // border: 2px solid red;
                 display: block;
+            }
+
+            img {
+                opacity: 10%;
             }
         }       
     }
