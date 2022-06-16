@@ -1,5 +1,8 @@
 <template>
     <div class="card-container">
+
+        <img :src="'https://image.tmdb.org/t/p/' + 'w342' + filmObject.poster_path" :alt="filmObject.original_title">
+
         <!-- Titolo -->
         <h2>{{filmObject.title}}</h2>
         <h2>{{filmObject.name}}</h2>
