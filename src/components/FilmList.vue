@@ -69,6 +69,8 @@ export default {
         .film-container {
           display: flex;
           flex-wrap: wrap;
+          width: 95%;
+          margin: 0 auto;
         }
     }
 </style>

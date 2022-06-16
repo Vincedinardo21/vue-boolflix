@@ -35,7 +35,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .card-container {
-        width: 342px;
-        border: 1px solid black;
+        width: 344px;
+        border: 1px solid white;
+        margin: 5px;
     }
 </style>
