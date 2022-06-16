@@ -4,7 +4,7 @@
           <MySearch @miaRicerca="searchFilm"/>
           {{userText}} 
         </div> 
-        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>     
+        <FilmCard v-for="(item, i) in films" :key="i" :filmObject="item"/>
     </section>
 </template>
 
@@ -23,12 +23,15 @@ export default {
     return {
         // API link
         apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=a52d13991466b7a593490ce84099f0d3&query=",
+        upiUrlSerie : "https://api.themoviedb.org/3/search/tv?api_key=a52d13991466b7a593490ce84099f0d3&query=",
         films : [],
+        // series : [],
         userText : "back to the future",
     }
   },
   created(){
     this.getFilm();
+    this.getSerie();
   },
   methods: {
     getFilm(){
@@ -37,10 +40,17 @@ export default {
             console.log(result);
         });
     },
+    getSerie(){
+        axios.get(this.apiUrlSerie + this.userText).then((result) => {
+            this.films = result.data.results;
+            console.log(result);
+        });
+    },
     searchFilm(mytext){
       this.userText = mytext;
       console.log(mytext);
       this.getFilm();
+      this.getSerie();
     }
   }
 }
